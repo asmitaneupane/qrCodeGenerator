@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      QR Code Generator
+      Dynamic QR Code Generator
       <p>&copy;Sushil Subedi</p>
     </ion-title>
   </ion-toolbar>
@@ -9,8 +9,16 @@
 
 <ion-content>
   <ion-input type="text" placeholder="Type Your Data" [(ngModel)]="data"></ion-input>
-    <button ion-button large (click)="generateQRCode()" name="btnGenerator">Generate</button>
-<ion-card *ngIf="generatedQRCode">
+    
+  <!-- <button ion-button large (click)="generateQRCode()" name="btnGenerator">Generate</button> -->
+<!-- <ion-card *ngIf="generatedQRCode">
   <ngx-qrcode [(qrc-value)]="generatedQRCode"></ngx-qrcode>
+</ion-card> -->
+
+
+<ion-card *ngIf="data">
+  <ngx-qrcode [(qrc-value)]="data"></ngx-qrcode>
 </ion-card>
+
+
  </ion-content>
