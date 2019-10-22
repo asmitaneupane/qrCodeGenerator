@@ -10,8 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  data=null;
-  generatedQRCode=null;
+  // data=null;
+  // generatedQRCode=null;
+  
+  
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -27,10 +29,10 @@ export class AppComponent {
     });
   }
 
-  generateQRCode()
-  {
-    console.log("method Called");
-    this.generatedQRCode=this.data;
-    console.log(this.generatedQRCode);
-  }
+  // generateQRCode()
+  // {
+  //   console.log("method Called");
+  //   this.generatedQRCode=this.data;
+  //   console.log(this.generatedQRCode);
+  // }
 }
