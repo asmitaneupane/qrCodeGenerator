@@ -1,3 +1,15 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input type="text" placeholder="Type Your Data" [(ngModel)]="data"></ion-input>
+    <button ion-button large (click)="generateQRCode()" name="btnGenerator">Generate</button>
+<ion-card *ngIf="generatedQRCode">
+  <ngx-qrcode [(qrc-value)]="generatedQRCode"></ngx-qrcode>
+</ion-card>
+ </ion-content>
